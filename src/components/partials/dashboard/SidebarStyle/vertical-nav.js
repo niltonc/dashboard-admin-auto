@@ -27,12 +27,14 @@ const VerticalNav = () => {
     return (
        <>
             <Accordion as="ul" className="navbar-nav iq-main-menu">
+                {/* HOME */}
                 <li className="nav-item static-item">
                     <Link className="nav-link static-item disabled" to="#" tabIndex="-1">
                         <span className="default-icon">Home</span>
                         <span className="mini-icon">-</span>
                     </Link>
                 </li>
+                    {/* DEVICES */}
                 <li className="nav-item">
                     <Link className={`${location.pathname === '/dashboard' ? 'active' : ''} nav-link `} aria-current="page" to="/dashboard" onClick={() => {}}>
                         <i className="icon">
@@ -41,10 +43,420 @@ const VerticalNav = () => {
                                 <path fillRule="evenodd" clipRule="evenodd" d="M4.53852 2H7.92449C9.32676 2 10.463 3.14585 10.463 4.55996V7.97452C10.463 9.38864 9.32676 10.5345 7.92449 10.5345H4.53852C3.13626 10.5345 2 9.38864 2 7.97452V4.55996C2 3.14585 3.13626 2 4.53852 2ZM4.53852 13.4655H7.92449C9.32676 13.4655 10.463 14.6114 10.463 16.0255V19.44C10.463 20.8532 9.32676 22 7.92449 22H4.53852C3.13626 22 2 20.8532 2 19.44V16.0255C2 14.6114 3.13626 13.4655 4.53852 13.4655ZM19.4615 13.4655H16.0755C14.6732 13.4655 13.537 14.6114 13.537 16.0255V19.44C13.537 20.8532 14.6732 22 16.0755 22H19.4615C20.8637 22 22 20.8532 22 19.44V16.0255C22 14.6114 20.8637 13.4655 19.4615 13.4655Z" fill="currentColor"></path>
                             </svg>
                         </i>
-                        <span className="item-name">Dashboard</span>
+                        <span className="item-name">Devices</span>
                     </Link>
                 </li>
+                {/* Controle */}
+                <li className="nav-item static-item">
+                    <Link className="nav-link static-item disabled" to="#" tabIndex="-1">
+                        <span className="default-icon">Controle</span>
+                        <span className="mini-icon">-</span>
+                    </Link>
+                </li>
+
+                {/* 433mhz gerais */}
                 <Accordion.Item as="li" eventKey="horizontal-menu" bsPrefix="nav-item" >
+                    <CustomToggle eventKey="horizontal-menu" onClick={(activeKey) => setActiveMenu(activeKey)}>
+                    <i className="icon">
+                            <svg width="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path opacity="0.4" d="M10.0833 15.958H3.50777C2.67555 15.958 2 16.6217 2 17.4393C2 18.2559 2.67555 18.9207 3.50777 18.9207H10.0833C10.9155 18.9207 11.5911 18.2559 11.5911 17.4393C11.5911 16.6217 10.9155 15.958 10.0833 15.958Z" fill="currentColor"></path>
+                                <path opacity="0.4" d="M22.0001 6.37867C22.0001 5.56214 21.3246 4.89844 20.4934 4.89844H13.9179C13.0857 4.89844 12.4102 5.56214 12.4102 6.37867C12.4102 7.1963 13.0857 7.86 13.9179 7.86H20.4934C21.3246 7.86 22.0001 7.1963 22.0001 6.37867Z" fill="currentColor"></path>
+                                <path d="M8.87774 6.37856C8.87774 8.24523 7.33886 9.75821 5.43887 9.75821C3.53999 9.75821 2 8.24523 2 6.37856C2 4.51298 3.53999 3 5.43887 3C7.33886 3 8.87774 4.51298 8.87774 6.37856Z" fill="currentColor"></path>
+                                <path d="M21.9998 17.3992C21.9998 19.2648 20.4609 20.7777 18.5609 20.7777C16.6621 20.7777 15.1221 19.2648 15.1221 17.3992C15.1221 15.5325 16.6621 14.0195 18.5609 14.0195C20.4609 14.0195 21.9998 15.5325 21.9998 17.3992Z" fill="currentColor"></path>
+                            </svg>
+                        </i>
+                        <span className="item-name">433Mhz</span>
+                        <i className="right-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
+                            </svg>
+                        </i>
+                    </CustomToggle>
+                    <Accordion.Collapse eventKey="horizontal-menu" >
+                        <ul  className="sub-nav">
+                            <li className="nav-item">
+                                <Link className={`${location.pathname === '/horizontal' ? 'active' : ''} nav-link`} to="/horizontal">
+                                    <i className="icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="10" viewBox="0 0 24 24" fill="currentColor">
+                                            <g>
+                                            <circle cx="12" cy="12" r="8" fill="currentColor"></circle>
+                                            </g>
+                                        </svg>
+                                    </i>
+                                    <i className="sidenav-mini-icon"> H </i>
+                                    <span className="item-name"> Interruptores </span>
+                                </Link>
+                            </li>
+                            <li className="nav-item">
+                                <Link className="nav-link " to="/dual-horizontal">
+                                    <i className="icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="10" viewBox="0 0 24 24" fill="currentColor">
+                                            <g>
+                                            <circle cx="12" cy="12" r="8" fill="currentColor"></circle>
+                                            </g>
+                                        </svg>
+                                    </i>
+                                    <i className="sidenav-mini-icon"> D </i>
+                                    <span className="item-name">Persiana</span>
+                                </Link>
+                            </li>
+                            <li className="nav-item">
+                                <Link className={`${location.pathname === '/dual-compact' ? 'active' : ''} nav-link`}  to="/dual-compact">
+                                    <i className="icon svg-icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="10" viewBox="0 0 24 24" fill="currentColor">
+                                            <g>
+                                            <circle cx="12" cy="12" r="8" fill="currentColor"></circle>
+                                            </g>
+                                        </svg>
+                                    </i>
+                                    <i className="sidenav-mini-icon"> D </i>                   
+                                    <span className="item-name">Garagem</span>
+                                </Link>
+                            </li>
+                            <li className="nav-item">
+                                <Link className={`${location.pathname === '/boxed' ? 'active' : ''} nav-link`} to="/boxed">
+                                    <i className="icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="10" viewBox="0 0 24 24" fill="currentColor">
+                                            <g>
+                                            <circle cx="12" cy="12" r="8" fill="currentColor"></circle>
+                                            </g>
+                                        </svg>
+                                    </i>
+                                    <i className="sidenav-mini-icon"> B </i>
+                                    <span className="item-name">Sensores</span>
+                                </Link>
+                            </li>
+                            <li className="nav-item">
+                                <Link className={`${location.pathname === '/boxedfancy' ? 'active' : ''} nav-link`} to="/boxedFancy">
+                                    <i className="icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="10" viewBox="0 0 24 24" fill="currentColor">
+                                            <g>
+                                            <circle cx="12" cy="12" r="8" fill="currentColor"></circle>
+                                            </g>
+                                        </svg>
+                                    </i>
+                                    <i className="sidenav-mini-icon"> B </i>
+                                    <span className="item-name">Alarmes</span>
+                                </Link>
+                            </li>
+                        </ul>
+                    </Accordion.Collapse>
+                </Accordion.Item>
+                {/* 433mhz gerais */}
+
+                {/* Infravermelho gerais */}
+                <Accordion.Item as="li" eventKey="horizontal-menu" bsPrefix="nav-item" >
+                    <CustomToggle eventKey="horizontal-menu" onClick={(activeKey) => setActiveMenu(activeKey)}>
+                    <i className="icon">
+                            <svg width="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path opacity="0.4" d="M10.0833 15.958H3.50777C2.67555 15.958 2 16.6217 2 17.4393C2 18.2559 2.67555 18.9207 3.50777 18.9207H10.0833C10.9155 18.9207 11.5911 18.2559 11.5911 17.4393C11.5911 16.6217 10.9155 15.958 10.0833 15.958Z" fill="currentColor"></path>
+                                <path opacity="0.4" d="M22.0001 6.37867C22.0001 5.56214 21.3246 4.89844 20.4934 4.89844H13.9179C13.0857 4.89844 12.4102 5.56214 12.4102 6.37867C12.4102 7.1963 13.0857 7.86 13.9179 7.86H20.4934C21.3246 7.86 22.0001 7.1963 22.0001 6.37867Z" fill="currentColor"></path>
+                                <path d="M8.87774 6.37856C8.87774 8.24523 7.33886 9.75821 5.43887 9.75821C3.53999 9.75821 2 8.24523 2 6.37856C2 4.51298 3.53999 3 5.43887 3C7.33886 3 8.87774 4.51298 8.87774 6.37856Z" fill="currentColor"></path>
+                                <path d="M21.9998 17.3992C21.9998 19.2648 20.4609 20.7777 18.5609 20.7777C16.6621 20.7777 15.1221 19.2648 15.1221 17.3992C15.1221 15.5325 16.6621 14.0195 18.5609 14.0195C20.4609 14.0195 21.9998 15.5325 21.9998 17.3992Z" fill="currentColor"></path>
+                            </svg>
+                        </i>
+                        <span className="item-name">Infravermelho</span>
+                        <i className="right-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
+                            </svg>
+                        </i>
+                    </CustomToggle>
+                    <Accordion.Collapse eventKey="horizontal-menu" >
+                        <ul  className="sub-nav">
+                            <li className="nav-item">
+                                <Link className={`${location.pathname === '/horizontal' ? 'active' : ''} nav-link`} to="/horizontal">
+                                    <i className="icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="10" viewBox="0 0 24 24" fill="currentColor">
+                                            <g>
+                                            <circle cx="12" cy="12" r="8" fill="currentColor"></circle>
+                                            </g>
+                                        </svg>
+                                    </i>
+                                    <i className="sidenav-mini-icon"> H </i>
+                                    <span className="item-name"> Ar Condicionado </span>
+                                </Link>
+                            </li>
+                            <li className="nav-item">
+                                <Link className="nav-link " to="/dual-horizontal">
+                                    <i className="icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="10" viewBox="0 0 24 24" fill="currentColor">
+                                            <g>
+                                            <circle cx="12" cy="12" r="8" fill="currentColor"></circle>
+                                            </g>
+                                        </svg>
+                                    </i>
+                                    <i className="sidenav-mini-icon"> D </i>
+                                    <span className="item-name">Mídia e TV</span>
+                                </Link>
+                            </li>
+                            
+                        </ul>
+                    </Accordion.Collapse>
+                </Accordion.Item>
+                {/* Infravermelho gerais */}
+
+                {/* Ziggbee */}
+                <li className="nav-item">
+                    <Link className={`${location.pathname === '/#' ? 'active' : ''} nav-link `} aria-current="page" to="/dashboard" onClick={() => {}}>
+                        <i className="icon">
+                            <svg width="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path opacity="0.4" d="M16.0756 2H19.4616C20.8639 2 22.0001 3.14585 22.0001 4.55996V7.97452C22.0001 9.38864 20.8639 10.5345 19.4616 10.5345H16.0756C14.6734 10.5345 13.5371 9.38864 13.5371 7.97452V4.55996C13.5371 3.14585 14.6734 2 16.0756 2Z" fill="currentColor"></path>
+                                <path fillRule="evenodd" clipRule="evenodd" d="M4.53852 2H7.92449C9.32676 2 10.463 3.14585 10.463 4.55996V7.97452C10.463 9.38864 9.32676 10.5345 7.92449 10.5345H4.53852C3.13626 10.5345 2 9.38864 2 7.97452V4.55996C2 3.14585 3.13626 2 4.53852 2ZM4.53852 13.4655H7.92449C9.32676 13.4655 10.463 14.6114 10.463 16.0255V19.44C10.463 20.8532 9.32676 22 7.92449 22H4.53852C3.13626 22 2 20.8532 2 19.44V16.0255C2 14.6114 3.13626 13.4655 4.53852 13.4655ZM19.4615 13.4655H16.0755C14.6732 13.4655 13.537 14.6114 13.537 16.0255V19.44C13.537 20.8532 14.6732 22 16.0755 22H19.4615C20.8637 22 22 20.8532 22 19.44V16.0255C22 14.6114 20.8637 13.4655 19.4615 13.4655Z" fill="currentColor"></path>
+                            </svg>
+                        </i>
+                        <span className="item-name">ZigBee</span>
+                    </Link>
+                </li>
+
+                    {/* LPR */}
+                    <Accordion.Item as="li" eventKey="horizontal-menu" bsPrefix="nav-item" >
+                    <CustomToggle eventKey="horizontal-menu" onClick={(activeKey) => setActiveMenu(activeKey)}>
+                    <i className="icon">
+                            <svg width="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path opacity="0.4" d="M10.0833 15.958H3.50777C2.67555 15.958 2 16.6217 2 17.4393C2 18.2559 2.67555 18.9207 3.50777 18.9207H10.0833C10.9155 18.9207 11.5911 18.2559 11.5911 17.4393C11.5911 16.6217 10.9155 15.958 10.0833 15.958Z" fill="currentColor"></path>
+                                <path opacity="0.4" d="M22.0001 6.37867C22.0001 5.56214 21.3246 4.89844 20.4934 4.89844H13.9179C13.0857 4.89844 12.4102 5.56214 12.4102 6.37867C12.4102 7.1963 13.0857 7.86 13.9179 7.86H20.4934C21.3246 7.86 22.0001 7.1963 22.0001 6.37867Z" fill="currentColor"></path>
+                                <path d="M8.87774 6.37856C8.87774 8.24523 7.33886 9.75821 5.43887 9.75821C3.53999 9.75821 2 8.24523 2 6.37856C2 4.51298 3.53999 3 5.43887 3C7.33886 3 8.87774 4.51298 8.87774 6.37856Z" fill="currentColor"></path>
+                                <path d="M21.9998 17.3992C21.9998 19.2648 20.4609 20.7777 18.5609 20.7777C16.6621 20.7777 15.1221 19.2648 15.1221 17.3992C15.1221 15.5325 16.6621 14.0195 18.5609 14.0195C20.4609 14.0195 21.9998 15.5325 21.9998 17.3992Z" fill="currentColor"></path>
+                            </svg>
+                        </i>
+                        <span className="item-name">LPR</span>
+                        <i className="right-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
+                            </svg>
+                        </i>
+                    </CustomToggle>
+                    <Accordion.Collapse eventKey="horizontal-menu" >
+                        <ul  className="sub-nav">
+                            <li className="nav-item">
+                                <Link className={`${location.pathname === '/#' ? 'active' : ''} nav-link`} to="/horizontal">
+                                    <i className="icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="10" viewBox="0 0 24 24" fill="currentColor">
+                                            <g>
+                                            <circle cx="12" cy="12" r="8" fill="currentColor"></circle>
+                                            </g>
+                                        </svg>
+                                    </i>
+                                    <i className="sidenav-mini-icon"> H </i>
+                                    <span className="item-name"> Cameras </span>
+                                </Link>
+                            </li>
+                            <li className="nav-item">
+                                <Link className="nav-link " to="/#">
+                                    <i className="icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="10" viewBox="0 0 24 24" fill="currentColor">
+                                            <g>
+                                            <circle cx="12" cy="12" r="8" fill="currentColor"></circle>
+                                            </g>
+                                        </svg>
+                                    </i>
+                                    <i className="sidenav-mini-icon"> D </i>
+                                    <span className="item-name">Veiculos</span>
+                                </Link>
+                            </li>
+                            
+                        </ul>
+                    </Accordion.Collapse>
+                </Accordion.Item>
+                {/* LPR */}
+
+                {/* SETTINGS */}
+                <li className="nav-item static-item">
+                    <Link className="nav-link static-item disabled" to="#" tabIndex="-1">
+                        <span className="default-icon">Settings</span>
+                        <span className="mini-icon">-</span>
+                    </Link>
+                </li>
+
+                     {/* Cenas */}
+                     <li className="nav-item">
+                    <Link className={`${location.pathname === '/#' ? 'active' : ''} nav-link `} aria-current="page" to="/dashboard" onClick={() => {}}>
+                        <i className="icon">
+                            <svg width="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path opacity="0.4" d="M16.0756 2H19.4616C20.8639 2 22.0001 3.14585 22.0001 4.55996V7.97452C22.0001 9.38864 20.8639 10.5345 19.4616 10.5345H16.0756C14.6734 10.5345 13.5371 9.38864 13.5371 7.97452V4.55996C13.5371 3.14585 14.6734 2 16.0756 2Z" fill="currentColor"></path>
+                                <path fillRule="evenodd" clipRule="evenodd" d="M4.53852 2H7.92449C9.32676 2 10.463 3.14585 10.463 4.55996V7.97452C10.463 9.38864 9.32676 10.5345 7.92449 10.5345H4.53852C3.13626 10.5345 2 9.38864 2 7.97452V4.55996C2 3.14585 3.13626 2 4.53852 2ZM4.53852 13.4655H7.92449C9.32676 13.4655 10.463 14.6114 10.463 16.0255V19.44C10.463 20.8532 9.32676 22 7.92449 22H4.53852C3.13626 22 2 20.8532 2 19.44V16.0255C2 14.6114 3.13626 13.4655 4.53852 13.4655ZM19.4615 13.4655H16.0755C14.6732 13.4655 13.537 14.6114 13.537 16.0255V19.44C13.537 20.8532 14.6732 22 16.0755 22H19.4615C20.8637 22 22 20.8532 22 19.44V16.0255C22 14.6114 20.8637 13.4655 19.4615 13.4655Z" fill="currentColor"></path>
+                            </svg>
+                        </i>
+                        <span className="item-name">Cenas</span>
+                    </Link>
+                </li>
+
+                    {/* Historico */}
+                    <li className="nav-item">
+                    <Link className={`${location.pathname === '/#' ? 'active' : ''} nav-link `} aria-current="page" to="/dashboard" onClick={() => {}}>
+                        <i className="icon">
+                            <svg width="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path opacity="0.4" d="M16.0756 2H19.4616C20.8639 2 22.0001 3.14585 22.0001 4.55996V7.97452C22.0001 9.38864 20.8639 10.5345 19.4616 10.5345H16.0756C14.6734 10.5345 13.5371 9.38864 13.5371 7.97452V4.55996C13.5371 3.14585 14.6734 2 16.0756 2Z" fill="currentColor"></path>
+                                <path fillRule="evenodd" clipRule="evenodd" d="M4.53852 2H7.92449C9.32676 2 10.463 3.14585 10.463 4.55996V7.97452C10.463 9.38864 9.32676 10.5345 7.92449 10.5345H4.53852C3.13626 10.5345 2 9.38864 2 7.97452V4.55996C2 3.14585 3.13626 2 4.53852 2ZM4.53852 13.4655H7.92449C9.32676 13.4655 10.463 14.6114 10.463 16.0255V19.44C10.463 20.8532 9.32676 22 7.92449 22H4.53852C3.13626 22 2 20.8532 2 19.44V16.0255C2 14.6114 3.13626 13.4655 4.53852 13.4655ZM19.4615 13.4655H16.0755C14.6732 13.4655 13.537 14.6114 13.537 16.0255V19.44C13.537 20.8532 14.6732 22 16.0755 22H19.4615C20.8637 22 22 20.8532 22 19.44V16.0255C22 14.6114 20.8637 13.4655 19.4615 13.4655Z" fill="currentColor"></path>
+                            </svg>
+                        </i>
+                        <span className="item-name">Historico</span>
+                    </Link>
+                </li>
+
+                {/* ações gerais */}
+                <Accordion.Item as="li" eventKey="horizontal-menu" bsPrefix="nav-item" >
+                    <CustomToggle eventKey="horizontal-menu" onClick={(activeKey) => setActiveMenu(activeKey)}>
+                    <i className="icon">
+                            <svg width="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path opacity="0.4" d="M10.0833 15.958H3.50777C2.67555 15.958 2 16.6217 2 17.4393C2 18.2559 2.67555 18.9207 3.50777 18.9207H10.0833C10.9155 18.9207 11.5911 18.2559 11.5911 17.4393C11.5911 16.6217 10.9155 15.958 10.0833 15.958Z" fill="currentColor"></path>
+                                <path opacity="0.4" d="M22.0001 6.37867C22.0001 5.56214 21.3246 4.89844 20.4934 4.89844H13.9179C13.0857 4.89844 12.4102 5.56214 12.4102 6.37867C12.4102 7.1963 13.0857 7.86 13.9179 7.86H20.4934C21.3246 7.86 22.0001 7.1963 22.0001 6.37867Z" fill="currentColor"></path>
+                                <path d="M8.87774 6.37856C8.87774 8.24523 7.33886 9.75821 5.43887 9.75821C3.53999 9.75821 2 8.24523 2 6.37856C2 4.51298 3.53999 3 5.43887 3C7.33886 3 8.87774 4.51298 8.87774 6.37856Z" fill="currentColor"></path>
+                                <path d="M21.9998 17.3992C21.9998 19.2648 20.4609 20.7777 18.5609 20.7777C16.6621 20.7777 15.1221 19.2648 15.1221 17.3992C15.1221 15.5325 16.6621 14.0195 18.5609 14.0195C20.4609 14.0195 21.9998 15.5325 21.9998 17.3992Z" fill="currentColor"></path>
+                            </svg>
+                        </i>
+                        <span className="item-name">Ações</span>
+                        <i className="right-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
+                            </svg>
+                        </i>
+                    </CustomToggle>
+                    <Accordion.Collapse eventKey="horizontal-menu" >
+                        <ul  className="sub-nav">
+                            <li className="nav-item">
+                                <Link className={`${location.pathname === '/horizontal' ? 'active' : ''} nav-link`} to="/horizontal">
+                                    <i className="icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="10" viewBox="0 0 24 24" fill="currentColor">
+                                            <g>
+                                            <circle cx="12" cy="12" r="8" fill="currentColor"></circle>
+                                            </g>
+                                        </svg>
+                                    </i>
+                                    <i className="sidenav-mini-icon"> H </i>
+                                    <span className="item-name"> Ação Tempo </span>
+                                </Link>
+                            </li>
+                            <li className="nav-item">
+                                <Link className="nav-link " to="/dual-horizontal">
+                                    <i className="icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="10" viewBox="0 0 24 24" fill="currentColor">
+                                            <g>
+                                            <circle cx="12" cy="12" r="8" fill="currentColor"></circle>
+                                            </g>
+                                        </svg>
+                                    </i>
+                                    <i className="sidenav-mini-icon"> D </i>
+                                    <span className="item-name">Ação Sensor</span>
+                                </Link>
+                            </li>
+                            <li className="nav-item">
+                                <Link className={`${location.pathname === '/dual-compact' ? 'active' : ''} nav-link`}  to="/dual-compact">
+                                    <i className="icon svg-icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="10" viewBox="0 0 24 24" fill="currentColor">
+                                            <g>
+                                            <circle cx="12" cy="12" r="8" fill="currentColor"></circle>
+                                            </g>
+                                        </svg>
+                                    </i>
+                                    <i className="sidenav-mini-icon"> D </i>                   
+                                    <span className="item-name">Ação Tempo e Sensor</span>
+                                </Link>
+                            </li>
+                        </ul>
+                    </Accordion.Collapse>
+                </Accordion.Item>
+                {/* ações gerais */}
+                        
+                         {/* configurações gerais */}
+                         <Accordion.Item as="li" eventKey="horizontal-menu" bsPrefix="nav-item" >
+                    <CustomToggle eventKey="horizontal-menu" onClick={(activeKey) => setActiveMenu(activeKey)}>
+                    <i className="icon">
+                            <svg width="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path opacity="0.4" d="M10.0833 15.958H3.50777C2.67555 15.958 2 16.6217 2 17.4393C2 18.2559 2.67555 18.9207 3.50777 18.9207H10.0833C10.9155 18.9207 11.5911 18.2559 11.5911 17.4393C11.5911 16.6217 10.9155 15.958 10.0833 15.958Z" fill="currentColor"></path>
+                                <path opacity="0.4" d="M22.0001 6.37867C22.0001 5.56214 21.3246 4.89844 20.4934 4.89844H13.9179C13.0857 4.89844 12.4102 5.56214 12.4102 6.37867C12.4102 7.1963 13.0857 7.86 13.9179 7.86H20.4934C21.3246 7.86 22.0001 7.1963 22.0001 6.37867Z" fill="currentColor"></path>
+                                <path d="M8.87774 6.37856C8.87774 8.24523 7.33886 9.75821 5.43887 9.75821C3.53999 9.75821 2 8.24523 2 6.37856C2 4.51298 3.53999 3 5.43887 3C7.33886 3 8.87774 4.51298 8.87774 6.37856Z" fill="currentColor"></path>
+                                <path d="M21.9998 17.3992C21.9998 19.2648 20.4609 20.7777 18.5609 20.7777C16.6621 20.7777 15.1221 19.2648 15.1221 17.3992C15.1221 15.5325 16.6621 14.0195 18.5609 14.0195C20.4609 14.0195 21.9998 15.5325 21.9998 17.3992Z" fill="currentColor"></path>
+                            </svg>
+                        </i>
+                        <span className="item-name">Configurações</span>
+                        <i className="right-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
+                            </svg>
+                        </i>
+                    </CustomToggle>
+                    <Accordion.Collapse eventKey="horizontal-menu" >
+                        <ul  className="sub-nav">
+                            <li className="nav-item">
+                                <Link className={`${location.pathname === '/horizontal' ? 'active' : ''} nav-link`} to="/horizontal">
+                                    <i className="icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="10" viewBox="0 0 24 24" fill="currentColor">
+                                            <g>
+                                            <circle cx="12" cy="12" r="8" fill="currentColor"></circle>
+                                            </g>
+                                        </svg>
+                                    </i>
+                                    <i className="sidenav-mini-icon"> H </i>
+                                    <span className="item-name"> Interruptores </span>
+                                </Link>
+                            </li>
+                            <li className="nav-item">
+                                <Link className="nav-link " to="/dual-horizontal">
+                                    <i className="icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="10" viewBox="0 0 24 24" fill="currentColor">
+                                            <g>
+                                            <circle cx="12" cy="12" r="8" fill="currentColor"></circle>
+                                            </g>
+                                        </svg>
+                                    </i>
+                                    <i className="sidenav-mini-icon"> D </i>
+                                    <span className="item-name">Persiana</span>
+                                </Link>
+                            </li>
+                            <li className="nav-item">
+                                <Link className={`${location.pathname === '/dual-compact' ? 'active' : ''} nav-link`}  to="/dual-compact">
+                                    <i className="icon svg-icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="10" viewBox="0 0 24 24" fill="currentColor">
+                                            <g>
+                                            <circle cx="12" cy="12" r="8" fill="currentColor"></circle>
+                                            </g>
+                                        </svg>
+                                    </i>
+                                    <i className="sidenav-mini-icon"> D </i>                   
+                                    <span className="item-name">Garagem</span>
+                                </Link>
+                            </li>
+                            <li className="nav-item">
+                                <Link className={`${location.pathname === '/boxed' ? 'active' : ''} nav-link`} to="/boxed">
+                                    <i className="icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="10" viewBox="0 0 24 24" fill="currentColor">
+                                            <g>
+                                            <circle cx="12" cy="12" r="8" fill="currentColor"></circle>
+                                            </g>
+                                        </svg>
+                                    </i>
+                                    <i className="sidenav-mini-icon"> B </i>
+                                    <span className="item-name">Sensores</span>
+                                </Link>
+                            </li>
+                            <li className="nav-item">
+                                <Link className={`${location.pathname === '/boxedfancy' ? 'active' : ''} nav-link`} to="/boxedFancy">
+                                    <i className="icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="10" viewBox="0 0 24 24" fill="currentColor">
+                                            <g>
+                                            <circle cx="12" cy="12" r="8" fill="currentColor"></circle>
+                                            </g>
+                                        </svg>
+                                    </i>
+                                    <i className="sidenav-mini-icon"> B </i>
+                                    <span className="item-name">Alarmes</span>
+                                </Link>
+                            </li>
+                        </ul>
+                    </Accordion.Collapse>
+                </Accordion.Item>
+                {/* configurações gerais */}
+
+                {/* <li className="nav-item static-item">
+                    <Link className="nav-link static-item disabled" to="#" tabIndex="-1">
+                        <span className="default-icon">Style</span>
+                        <span className="mini-icon">-</span>
+                    </Link>
+                </li> */}
+
+                {/* <Accordion.Item as="li" eventKey="horizontal-menu" bsPrefix="nav-item" >
                     <CustomToggle eventKey="horizontal-menu" onClick={(activeKey) => setActiveMenu(activeKey)}>
                     <i className="icon">
                             <svg width="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -130,8 +542,9 @@ const VerticalNav = () => {
                             </li>
                         </ul>
                     </Accordion.Collapse>
-                </Accordion.Item>
-                <li className="nav-item">
+                </Accordion.Item> */}
+
+                {/* <li className="nav-item">
                     <Link className={`${location.pathname === '/' ? 'active' : ''} nav-link `} aria-current="page" target="blank" to="/">
                         <i className="icon">
                         <svg width="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -142,15 +555,16 @@ const VerticalNav = () => {
                         </i>
                         <span className="item-name">Design System<span className="badge rounded-pill bg-success">UI</span></span>
                     </Link>
-                </li>
-                <li><hr className="hr-horizontal"/></li>
+                </li> */}
+
+                {/* <li><hr className="hr-horizontal"/></li>
                 <li className="nav-item static-item">
                     <Link className="nav-link static-item disabled" to="#" tabIndex="-1">
                         <span className="default-icon">Pages</span>
                         <span className="mini-icon">-</span>
                     </Link>
-                </li>
-                <Accordion.Item as="li" eventKey="sidebar-special" bsPrefix="nav-item">
+                </li> */}
+                {/* <Accordion.Item as="li" eventKey="sidebar-special" bsPrefix="nav-item">
                 <CustomToggle eventKey="sidebar-special" onClick={(activeKey) => setActiveMenu(activeKey)}>
                         <i className="icon">
                             <svg width="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -450,14 +864,16 @@ const VerticalNav = () => {
                         <span className="item-name">Admin</span>
                     </Link>
                 </li>
-                <li><hr className="hr-horizontal"/></li>
+                 */}
+                 
+                {/* <li><hr className="hr-horizontal"/></li>
                 <li className="nav-item static-item">
                     <Link className="nav-link static-item disabled" to="#" tabIndex="-1">
                         <span className="default-icon">Elements</span>
                         <span className="mini-icon">-</span>
                     </Link>
-                </li>
-                <li className="nav-item">
+                </li> */}
+                {/* <li className="nav-item">
                     <Link className="nav-link" to="/">
                         <i className="icon">
                             <svg width="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">                                
@@ -468,8 +884,8 @@ const VerticalNav = () => {
                         </i>
                         <span className="item-name">Components</span>
                     </Link>
-                </li>
-                <Accordion.Item as="li" eventKey="sidebar-widget" bsPrefix="nav-item">
+                </li> */}
+                {/* <Accordion.Item as="li" eventKey="sidebar-widget" bsPrefix="nav-item">
                     <CustomToggle eventKey="sidebar-widget" active={activeMenu === 'sidebar-widget' ? true : false} onClick={(activeKey) => setActiveMenu(activeKey)}>
                         <i className="icon">
                             <svg width="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -527,8 +943,8 @@ const VerticalNav = () => {
                             </li>
                         </ul>
                     </Accordion.Collapse>
-                </Accordion.Item>
-                <Accordion.Item as="li" eventKey="sidebar-maps" bsPrefix="nav-item">
+                </Accordion.Item> */}
+                {/* <Accordion.Item as="li" eventKey="sidebar-maps" bsPrefix="nav-item">
                 <CustomToggle eventKey="sidebar-maps" active={activeMenu === 'sidebar-maps' ? true : false} onClick={(activeKey) => setActiveMenu(activeKey)}>
                         <i className="icon">
                             <svg width="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -573,8 +989,8 @@ const VerticalNav = () => {
                             </li>
                         </ul>
                     </Accordion.Collapse>
-                </Accordion.Item>
-                <Accordion.Item as="li" eventKey="sidebar-form" bsPrefix="nav-item">
+                </Accordion.Item> */}
+                {/* <Accordion.Item as="li" eventKey="sidebar-form" bsPrefix="nav-item">
                  <CustomToggle eventKey="sidebar-form" active={activeMenu === 'sidebar-form' ? true : false} onClick={(activeKey) => setActiveMenu(activeKey)}>
                         <i className="icon">
                             <svg width="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -632,8 +1048,8 @@ const VerticalNav = () => {
                             </li>
                         </ul>
                     </Accordion.Collapse>
-                </Accordion.Item>
-                <Accordion.Item as="li" eventKey="sidebar-table" bsPrefix="nav-item">
+                </Accordion.Item> */}
+                {/* <Accordion.Item as="li" eventKey="sidebar-table" bsPrefix="nav-item">
                  <CustomToggle eventKey="sidebar-table" onClick={(activeKey) => setActiveMenu(activeKey)}>
                         <i className="icon">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
@@ -678,8 +1094,8 @@ const VerticalNav = () => {
                             </li>
                         </ul>
                     </Accordion.Collapse>
-                </Accordion.Item>
-                <Accordion.Item as="li" eventKey="sidebar-icons" bsPrefix="nav-item mb-5">
+                </Accordion.Item> */}
+                {/* <Accordion.Item as="li" eventKey="sidebar-icons" bsPrefix="nav-item mb-5">
                 <CustomToggle eventKey="sidebar-icons" onClick={(activeKey) => setActiveMenu(activeKey)}>
                         <i className="icon">
                             <svg xmlns="http://www.w3.org/2000/svg" width="20" viewBox="0 0 24 24" fill="currentColor">
@@ -737,7 +1153,7 @@ const VerticalNav = () => {
                             </li>
                         </ul>
                     </Accordion.Collapse>
-                </Accordion.Item>
+                </Accordion.Item> */}
             </Accordion>
        </>
     )
