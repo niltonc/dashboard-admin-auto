@@ -48,7 +48,7 @@ const VerticalNav = () => {
                 
                     {/* DEVICES */}
                 <li className="nav-item">
-                    <Link className={`${location.pathname === '/dashboard' ? 'active' : ''} nav-link `} aria-current="page" to="/dashboard" onClick={() => {}}>
+                    <Link className={`${location.pathname === '/dashboard' ? 'active' : ''} nav-link `} aria-current="page" to="/#" onClick={() => {}}>
                         <i className="icon">
                             
                             <svg width="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -89,7 +89,7 @@ const VerticalNav = () => {
                     <Accordion.Collapse eventKey="menu-433" >
                         <ul  className="sub-nav">
                             <li className="nav-item">
-                                <Link className={`${location.pathname === '/horizontal' ? 'active' : ''} nav-link`} to="/horizontal">
+                                <Link className={`${location.pathname === '/horizontal' ? 'active' : ''} nav-link`} to="/#">
                                     <i className="icon">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="10" viewBox="0 0 24 24" fill="currentColor">
                                             <g>
@@ -115,7 +115,7 @@ const VerticalNav = () => {
                                 </Link>
                             </li>
                             <li className="nav-item">
-                                <Link className={`${location.pathname === '/dual-compact' ? 'active' : ''} nav-link`}  to="/dual-compact">
+                                <Link className={`${location.pathname === '/dual-compact' ? 'active' : ''} nav-link`}  to="/#">
                                     <i className="icon svg-icon">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="10" viewBox="0 0 24 24" fill="currentColor">
                                             <g>
@@ -128,7 +128,7 @@ const VerticalNav = () => {
                                 </Link>
                             </li>
                             <li className="nav-item">
-                                <Link className={`${location.pathname === '/boxed' ? 'active' : ''} nav-link`} to="/boxed">
+                                <Link className={`${location.pathname === '/boxed' ? 'active' : ''} nav-link`} to="/#">
                                     <i className="icon">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="10" viewBox="0 0 24 24" fill="currentColor">
                                             <g>
@@ -141,7 +141,7 @@ const VerticalNav = () => {
                                 </Link>
                             </li>
                             <li className="nav-item">
-                                <Link className={`${location.pathname === '/boxedfancy' ? 'active' : ''} nav-link`} to="/boxedFancy">
+                                <Link className={`${location.pathname === '/boxedfancy' ? 'active' : ''} nav-link`} to="/#">
                                     <i className="icon">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="10" viewBox="0 0 24 24" fill="currentColor">
                                             <g>
@@ -179,7 +179,7 @@ const VerticalNav = () => {
                     <Accordion.Collapse eventKey="menu-infra" >
                         <ul  className="sub-nav">
                             <li className="nav-item">
-                                <Link className={`${location.pathname === '/horizontal' ? 'active' : ''} nav-link`} to="/horizontal">
+                                <Link className={`${location.pathname === '/horizontal' ? 'active' : ''} nav-link`} to="/#">
                                     <i className="icon">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="10" viewBox="0 0 24 24" fill="currentColor">
                                             <g>
@@ -212,7 +212,7 @@ const VerticalNav = () => {
 
                 {/* Ziggbee */}
                 <li className="nav-item">
-                    <Link className={`${location.pathname === '/#' ? 'active' : ''} nav-link `} aria-current="page" to="/dashboard" onClick={() => {}}>
+                    <Link className={`${location.pathname === '/#' ? 'active' : ''} nav-link `} aria-current="page" to="/#" onClick={() => {}}>
                         <i className="icon">
                             <svg width="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path opacity="0.4" d="M16.0756 2H19.4616C20.8639 2 22.0001 3.14585 22.0001 4.55996V7.97452C22.0001 9.38864 20.8639 10.5345 19.4616 10.5345H16.0756C14.6734 10.5345 13.5371 9.38864 13.5371 7.97452V4.55996C13.5371 3.14585 14.6734 2 16.0756 2Z" fill="currentColor"></path>
@@ -244,7 +244,7 @@ const VerticalNav = () => {
                     <Accordion.Collapse eventKey="menu-lpr" >
                         <ul  className="sub-nav">
                             <li className="nav-item">
-                                <Link className={`${location.pathname === '/#' ? 'active' : ''} nav-link`} to="/horizontal">
+                                <Link className={`${location.pathname === '/#' ? 'active' : ''} nav-link`} to="/#">
                                     <i className="icon">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="10" viewBox="0 0 24 24" fill="currentColor">
                                             <g>
@@ -285,7 +285,7 @@ const VerticalNav = () => {
 
                      {/* Cenas */}
                 <li className="nav-item">
-                    <Link className={`${location.pathname === '/#' ? 'active' : ''} nav-link `} aria-current="page" to="/dashboard" onClick={() => {}}>
+                    <Link className={`${location.pathname === '/#' ? 'active' : ''} nav-link `} aria-current="page" to="/#" onClick={() => {}}>
                         <i className="icon">
                             <svg width="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path opacity="0.4" d="M16.0756 2H19.4616C20.8639 2 22.0001 3.14585 22.0001 4.55996V7.97452C22.0001 9.38864 20.8639 10.5345 19.4616 10.5345H16.0756C14.6734 10.5345 13.5371 9.38864 13.5371 7.97452V4.55996C13.5371 3.14585 14.6734 2 16.0756 2Z" fill="currentColor"></path>
@@ -298,7 +298,7 @@ const VerticalNav = () => {
 
                     {/* Historico */}
                 <li className="nav-item">
-                    <Link className={`${location.pathname === '/#' ? 'active' : ''} nav-link `} aria-current="page" to="/dashboard" onClick={() => {}}>
+                    <Link className={`${location.pathname === '/#' ? 'active' : ''} nav-link `} aria-current="page" to="/#" onClick={() => {}}>
                         <i className="icon">
                             <svg width="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path opacity="0.4" d="M16.0756 2H19.4616C20.8639 2 22.0001 3.14585 22.0001 4.55996V7.97452C22.0001 9.38864 20.8639 10.5345 19.4616 10.5345H16.0756C14.6734 10.5345 13.5371 9.38864 13.5371 7.97452V4.55996C13.5371 3.14585 14.6734 2 16.0756 2Z" fill="currentColor"></path>
@@ -330,7 +330,7 @@ const VerticalNav = () => {
                     <Accordion.Collapse eventKey="menu-action" >
                         <ul  className="sub-nav">
                             <li className="nav-item">
-                                <Link className={`${location.pathname === '/horizontal' ? 'active' : ''} nav-link`} to="/horizontal">
+                                <Link className={`${location.pathname === '/horizontal' ? 'active' : ''} nav-link`} to="/#">
                                     <i className="icon">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="10" viewBox="0 0 24 24" fill="currentColor">
                                             <g>
@@ -343,7 +343,7 @@ const VerticalNav = () => {
                                 </Link>
                             </li>
                             <li className="nav-item">
-                                <Link className="nav-link " to="/dual-horizontal">
+                                <Link className="nav-link " to="/#">
                                     <i className="icon">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="10" viewBox="0 0 24 24" fill="currentColor">
                                             <g>
@@ -356,7 +356,7 @@ const VerticalNav = () => {
                                 </Link>
                             </li>
                             <li className="nav-item">
-                                <Link className={`${location.pathname === '/dual-compact' ? 'active' : ''} nav-link`}  to="/dual-compact">
+                                <Link className={`${location.pathname === '/dual-compact' ? 'active' : ''} nav-link`}  to="/#">
                                     <i className="icon svg-icon">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="10" viewBox="0 0 24 24" fill="currentColor">
                                             <g>
@@ -394,7 +394,7 @@ const VerticalNav = () => {
                     <Accordion.Collapse eventKey="menu-settings" >
                         <ul  className="sub-nav">
                             <li className="nav-item">
-                                <Link className={`${location.pathname === '/horizontal' ? 'active' : ''} nav-link`} to="/horizontal">
+                                <Link className={`${location.pathname === '/horizontal' ? 'active' : ''} nav-link`} to="/#">
                                     <i className="icon">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="10" viewBox="0 0 24 24" fill="currentColor">
                                             <g>
@@ -407,7 +407,7 @@ const VerticalNav = () => {
                                 </Link>
                             </li>
                             <li className="nav-item">
-                                <Link className="nav-link " to="/dual-horizontal">
+                                <Link className="nav-link " to="/#">
                                     <i className="icon">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="10" viewBox="0 0 24 24" fill="currentColor">
                                             <g>
@@ -420,7 +420,7 @@ const VerticalNav = () => {
                                 </Link>
                             </li>
                             <li className="nav-item">
-                                <Link className={`${location.pathname === '/dual-compact' ? 'active' : ''} nav-link`}  to="/dual-compact">
+                                <Link className={`${location.pathname === '/dual-compact' ? 'active' : ''} nav-link`}  to="/#">
                                     <i className="icon svg-icon">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="10" viewBox="0 0 24 24" fill="currentColor">
                                             <g>
@@ -433,7 +433,7 @@ const VerticalNav = () => {
                                 </Link>
                             </li>
                             <li className="nav-item">
-                                <Link className={`${location.pathname === '/boxed' ? 'active' : ''} nav-link`} to="/boxed">
+                                <Link className={`${location.pathname === '/boxed' ? 'active' : ''} nav-link`} to="/#">
                                     <i className="icon">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="10" viewBox="0 0 24 24" fill="currentColor">
                                             <g>
@@ -446,7 +446,7 @@ const VerticalNav = () => {
                                 </Link>
                             </li>
                             <li className="nav-item">
-                                <Link className={`${location.pathname === '/boxedfancy' ? 'active' : ''} nav-link`} to="/boxedFancy">
+                                <Link className={`${location.pathname === '/boxedfancy' ? 'active' : ''} nav-link`} to="/#">
                                     <i className="icon">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="10" viewBox="0 0 24 24" fill="currentColor">
                                             <g>
