@@ -102,7 +102,7 @@ const Header = (props) => {
                     </Navbar.Toggle>
                     <Navbar.Collapse  id="navbarSupportedContent">
                         <Nav as="ul" className="mb-2 ms-auto navbar-list mb-lg-0">
-                            <Dropdown as="li" className="nav-item">
+                            {/* <Dropdown as="li" className="nav-item">
                                 <Dropdown.Toggle as={CustomToggle}   variant="search-toggle nav-link">
                                     <img src={flag1} className="img-fluid rounded-circle" alt="user" style={{height: "30px", minWidth: "30px", width: "30px",}}/>
                                     <span className="bg-primary"></span>
@@ -120,7 +120,7 @@ const Header = (props) => {
                                         </div>
                                     </div>
                                 </Dropdown.Menu>
-                            </Dropdown>
+                            </Dropdown> */}
                             <Dropdown as="li" className="nav-item">
                                 <Dropdown.Toggle as={CustomToggle}  href="#"   variant=" nav-link" id="notification-drop" data-bs-toggle="dropdown" >
                                     <svg width="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -275,8 +275,8 @@ const Header = (props) => {
                                     <img src={avatars6}alt="User-Profile" className="theme-color-yellow-img img-fluid avatar avatar-50 avatar-rounded"/>
                                     <img src={avatars4} alt="User-Profile" className="theme-color-pink-img img-fluid avatar avatar-50 avatar-rounded"/>
                                     <div className="caption ms-3 d-none d-md-block ">
-                                        <h6 className="mb-0 caption-title">Austin Robertson</h6>
-                                        <p className="mb-0 caption-sub-title">Marketing Administrator</p>
+                                        <h6 className="mb-0 caption-title">Nome da Casa</h6>
+                                        <p className="mb-0 caption-sub-title">sub nome // </p>
                                     </div>
                                 </Dropdown.Toggle>
                                 <Dropdown.Menu  className="dropdown-menu-end" aria-labelledby="navbarDropdown">
