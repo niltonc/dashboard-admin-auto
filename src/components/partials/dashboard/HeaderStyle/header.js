@@ -5,12 +5,6 @@ import CustomToggle from '../../../dropdowns'
 import {bindActionCreators} from "redux"
 
 //img
-import flag1 from '../../../../assets/images/Flag/flag001.png'
-import flag2 from '../../../../assets/images/Flag/flag-02.png'
-import flag3 from '../../../../assets/images/Flag/flag-03.png'
-import flag4 from '../../../../assets/images/Flag/flag-04.png'
-import flag5 from '../../../../assets/images/Flag/flag-05.png'
-import flag6 from '../../../../assets/images/Flag/flag-06.png'
 import shapes1 from '../../../../assets/images/shapes/01.png'
 import shapes2 from '../../../../assets/images/shapes/02.png'
 import shapes3 from '../../../../assets/images/shapes/03.png'
@@ -23,8 +17,8 @@ import avatars4 from '../../../../assets/images/avatars/avtar_3.png'
 import avatars5 from '../../../../assets/images/avatars/avtar_4.png'
 import avatars6 from '../../../../assets/images/avatars/avtar_5.png'
 // logo
-import Logo from '../../components/logo'
-
+//import Logo from '../../components/logo'
+import Logo from '../../../../assets/images/logo'
 // store
 import {NavbarstyleAction, getDirMode, SchemeDirAction,  getNavbarStyleMode, getSidebarActiveMode, SidebarActiveStyleAction, getDarkMode, ModeAction,  SidebarColorAction, getSidebarColorMode, getSidebarTypeMode} from '../../../../store/setting/setting'
 import {connect} from "react-redux"
@@ -74,7 +68,7 @@ const Header = (props) => {
             <Navbar expand="lg" variant="light" className="nav iq-navbar">
                 <Container fluid className="navbar-inner">
                     <Link to="/dashboard" className="navbar-brand">
-                        <Logo color={true} />
+                        <Logo />
                         <h4 className="logo-title">Autodomo</h4>
                     </Link>
                     <div className="sidebar-toggle" data-toggle="sidebar" data-active="true" onClick={minisidebar}>
