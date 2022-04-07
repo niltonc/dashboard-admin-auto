@@ -25,16 +25,12 @@ const MobildeOffcanvas =()=> {
                             <rect x="10.5366" y="16.3945" width="16" height="4" rx="2" transform="rotate(45 10.5366 16.3945)" fill="currentColor"/>
                             <rect x="10.5562" y="-0.556152" width="28" height="4" rx="2" transform="rotate(45 10.5562 -0.556152)" fill="currentColor"/>
                         </svg>
-                        <h4 className="logo-title">Hope UI</h4>
+                        <h4 className="logo-title">Autodomo</h4>
                     </div>
                 </Offcanvas.Header>
                 <Offcanvas.Body>
                     <ul className="navbar-nav nav">
                         <Nav.Item as="li"><Link className={`${location.pathname === '/horizontal' ? 'active' : ''} nav-link `} to="/horizontal"> Horizontal </Link></Nav.Item>
-                        <Nav.Item as="li"><Link className={`${location.pathname === '/dual-horizontal' ? 'active' : ''} nav-link `} to="/dual-horizontal"> Dual Horizontal </Link></Nav.Item>
-                        <Nav.Item as="li"><Link className={`${location.pathname === '/dual-compact' ? 'active' : ''} nav-link `} to="/dual-compact"><span className="item-name">Dual Compact</span></Link></Nav.Item>
-                        <Nav.Item as="li"><Link className={`${location.pathname === '/boxed' ? 'active' : ''} nav-link `} to="/boxed"> Boxed Horizontal </Link></Nav.Item>
-                        <Nav.Item as="li"><Link className={`${location.pathname === '/boxedFancy' ? 'active' : ''} nav-link `} to="/boxedFancy"> Boxed Fancy</Link></Nav.Item>
                     </ul>
                 </Offcanvas.Body>
             </Offcanvas>

@@ -66,6 +66,7 @@ const Sidebar = (props) => {
          
     
     )
+
     const minisidebar =() =>{
         document.getElementsByTagName('ASIDE')[0].classList.toggle('sidebar-mini')
     }
