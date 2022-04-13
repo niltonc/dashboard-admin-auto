@@ -1,0 +1,56 @@
+$text-color-primary: #111;
+$text-color-secundary:#7d7d7d;
+$bg-color: #FFFFFF;
+
+.buttonDevice {
+    position: relative;
+    display: flex;
+    height: 160px;
+    width: 160px;
+    word-wrap: break-word;
+    background-color: $bg-color;
+    background-clip: border-box;
+    border: transparent;
+    border-radius: 10px;
+    box-shadow:0 1rem 5rem rgba($text-color-secundary, .2);
+    align-items: center;
+    margin-top: 10px;
+
+    .iconDevice{
+        position: absolute;
+        left: 10px;
+        right: 100px;
+        top: 10px;  
+    }
+
+    .viewTitleDevice{
+        position: absolute;
+        max-width: 135px;
+        top: 60px;
+        left: 13px;   
+        
+        .titleDevice {
+            color: $text-color-primary;
+            font-weight: bold;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            max-height: 45px;
+            text-align: start;
+        }
+        
+        .subtitleDevice{
+            color: $text-color-secundary;
+            font-weight: 600;
+            text-align: start;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+    }   
+}
+
+
+
+
+
+
